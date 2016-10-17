@@ -8,10 +8,15 @@ public class RayCastTest : MonoBehaviour
     public Material[] material;
     private bool hit = false;
     private Text txtRef;
+    public string location;
+    public string ecologicalValue;
+    public string historicalSignificance;
 
     void OnMouseDown()
     {
-        string points = "(" + transform.position.x + ", " + transform.position.y + ", " + transform.position.z + ")";
+        string points = "Coordinates\nX: " + transform.position.x + "\nY: "
+            + transform.position.y + "\nZ: " + transform.position.z + "\n\nLocation: " + location
+            + "\nEcological Value: " + ecologicalValue + "\nHistorical Significance: " + historicalSignificance;
         txtRef = GameObject.Find("Canvas").GetComponent<Text>();
         txtRef.text = points;
         //GetComponentInChildren<TextMesh>().text = points;

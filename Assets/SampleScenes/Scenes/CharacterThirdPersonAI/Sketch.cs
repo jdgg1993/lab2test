@@ -37,6 +37,9 @@ public class Sketch : MonoBehaviour {
             //newCube.GetComponent<myCubeScript>().setSize((1.0f - perc) * 2);
             //newCube.GetComponent<myCubeScript>().ratateSpeed = 0;
             newCube.GetComponentInChildren<TextMesh>().text = product.WhenReadingRecorded;
+            newCube.GetComponent<RayCastTest>().location = product.Location;
+            newCube.GetComponent<RayCastTest>().ecologicalValue = product.EcologicalValue;
+            newCube.GetComponent<RayCastTest>().historicalSignificance = product.HistoricalSignificance;
         }
     }
 	
