@@ -1393,7 +1393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myPrefab: {fileID: 1000011755566712, guid: 0bc531bc3de120d428c292d20247a5e2, type: 2}
-  _WebsiteURL: http://infosyslab10mobile.azurewebsites.net/tables/WaterPollutionReading?ZUMO-API-VERSION=2.0.0
+  _WebsiteURL: http://infosys320lab2test.azurewebsites.net/tables/TreeSurvey?ZUMO-API-VERSION=2.0.0
 --- !u!4 &1619206860
 Transform:
   m_ObjectHideFlags: 0

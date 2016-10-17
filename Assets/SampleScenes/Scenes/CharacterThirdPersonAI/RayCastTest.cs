@@ -14,7 +14,7 @@ public class RayCastTest : MonoBehaviour
         string points = "(" + transform.position.x + ", " + transform.position.y + ", " + transform.position.z + ")";
         txtRef = GameObject.Find("Canvas").GetComponent<Text>();
         txtRef.text = points;
-        GetComponentInChildren<TextMesh>().text = points;
+        //GetComponentInChildren<TextMesh>().text = points;
         GetComponent<Renderer>().material = material[0];
         if (hit)
             GetComponent<Renderer>().material = material[0];

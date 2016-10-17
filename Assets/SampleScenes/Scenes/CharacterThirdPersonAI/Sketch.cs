@@ -4,7 +4,7 @@ using Pathfinding.Serialization.JsonFx; //make sure you include this using
 public class Sketch : MonoBehaviour {
     public GameObject myPrefab;
     // Put your URL here
-    public string _WebsiteURL = "http://infosyslab10mobile.azurewebsites.net/tables/WaterPollutionReading?ZUMO-API-VERSION=2.0.0";
+    public string _WebsiteURL = "http://infosys320lab2test.azurewebsites.net/tables/TreeSurvey?ZUMO-API-VERSION=2.0.0";
 
     void Start () {
         //Reguest.GET can be called passing in your ODATA url as a string in the form:
@@ -28,7 +28,6 @@ public class Sketch : MonoBehaviour {
         foreach (Product product in products)
         {
             //Example of how to use the object
-            Debug.Log("This products name is: " + product.Location);
             float perc = i / (float)totalCubes;
             i++;
             float x = (float) product.X;
@@ -37,7 +36,7 @@ public class Sketch : MonoBehaviour {
             GameObject newCube = (GameObject)Instantiate(myPrefab, new Vector3(x, y, z), Quaternion.identity);
             //newCube.GetComponent<myCubeScript>().setSize((1.0f - perc) * 2);
             //newCube.GetComponent<myCubeScript>().ratateSpeed = 0;
-            //newCube.GetComponentInChildren<TextMesh>().text = product.Location;
+            newCube.GetComponentInChildren<TextMesh>().text = product.WhenReadingRecorded;
         }
     }
 	
